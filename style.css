@@ -1,0 +1,61 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    
+    font-family: sans-serif;
+
+}
+
+canvas#starfield {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+
+    width: 80%;
+    max-width: 700px;
+    padding: 2rem;
+    
+    background: rgba(66, 66, 66, 0.98);
+    border-radius: 1rem;
+    border: 2px solid white;
+    animation: pulse 1s infinite alternate;
+
+    text-align: center;
+    pointer-events: none;
+}
+
+article {
+    color: black;
+}
+
+.info {
+    /*background-color: aqua;*/
+    padding: 1%;
+    border-radius: 1rem;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+}
+
+@keyframes pulse {
+  from { box-shadow: 0 0 10px rgba(255,255,255,0.3); }
+  to   { box-shadow: 0 0 15px rgba(255,255,255,1); }
+
+}
+
